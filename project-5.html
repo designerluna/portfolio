@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Case Study: WorldTrips Customer Portal Redesign - Self-service mobile and desktop portal">
+  <title>WorldTrips Customer Portal Redesign | Luna UX Design</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+</head>
+<body>
+  <canvas id="space-canvas"></canvas>
+
+  <!-- Header -->
+  <header>
+    <div class="container nav-container">
+      <a href="home.html" class="logo-link">
+        <img src="img/logo.png" alt="Luna Crescent Moon Logo" class="logo-img">
+        <span>LUNA</span>
+      </a>
+      
+      <button class="mobile-toggle" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="home.html#work-section" class="active">Work</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#contact-section">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero Header -->
+  <section class="case-hero">
+    <div class="container case-hero-content">
+      <span class="project-tag" style="color: var(--color-teal-primary); background-color: var(--color-teal-bg);">Travel Insurance & UX</span>
+      <h1 style="font-size: 3rem; font-weight: 800; margin-top: 1rem; margin-bottom: 1rem;">WorldTrips Customer Portal Redesign</h1>
+      <p class="intro-lead" style="color: var(--color-text-muted);">
+        Rethinking and redesigning the self-service web experience for Client Zone and Student Zone members.
+      </p>
+
+      <div class="case-meta-grid">
+        <div class="case-meta-item">
+          <span class="case-meta-label">Client</span>
+          <span class="case-meta-value">WorldTrips</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">My Role</span>
+          <span class="case-meta-value">UX Researcher & Designer</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Duration</span>
+          <span class="case-meta-value">3 Months</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Platform</span>
+          <span class="case-meta-value">Responsive Web (Mobile & Desktop)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Body Content -->
+  <main class="container case-body">
+    <!-- Section 1: Overview -->
+    <section class="case-section">
+      <h2 class="section-num-title">01. Overview</h2>
+      <h3 class="section-heading">Redesigning for Self-Service</h3>
+      <p class="serif-body">
+        WorldTrips is a travel insurance company offering various plans that include travel insurance benefits at different price points and benefit levels. The Client Zone portal serves travel medical insurance policyholders, and the Student Zone portal is designed for international student health insurance policyholders. 
+      </p>
+      <p class="serif-body">
+        A complete redesign of the portal was necessary because the legacy platform was limited, failed to provide sufficient information, and drove high customer support call volumes. There was substantial agent and customer demand for an intuitive, comprehensive self-service portal.
+      </p>
+      <p class="serif-body" style="margin-bottom: 2rem;">
+        My team consisted of myself as the lead UX researcher and designer of the portal, a colleague who documented the UI requirements, and a developer who offered feedback from a technical feasibility perspective.
+      </p>
+
+      <div class="case-grid-2" style="margin: 2.5rem 0; gap: 1.5rem;">
+        <div class="case-card-gray" style="border-left: 3px solid var(--color-teal-primary); display: flex; flex-direction: column; justify-content: center;">
+          <h4 style="color: var(--color-teal-primary); margin-bottom: 0.75rem; font-size: 1.2rem;">The Goal</h4>
+          <p style="font-size: 0.95rem; color: var(--color-text-muted); line-height: 1.6;">
+            Complete phase 1 of the customer portal front-end development by designing and prototype-testing intuitive desktop and mobile versions of a new customer portal.
+          </p>
+        </div>
+        <div class="case-card-gray" style="border-left: 3px solid var(--color-coral-accent);">
+          <h4 style="color: var(--color-coral-accent); margin-bottom: 0.75rem; font-size: 1.2rem;">Key Objectives</h4>
+          <ul style="list-style: none; padding-left: 0; font-size: 0.95rem; color: var(--color-text-muted); display: flex; flex-direction: column; gap: 0.5rem;">
+            <li style="display: flex; gap: 8px; align-items: flex-start;">
+              <span style="color: var(--color-coral-accent); font-weight: bold;">•</span>
+              Make the new customer portal intuitive and efficient.
+            </li>
+            <li style="display: flex; gap: 8px; align-items: flex-start;">
+              <span style="color: var(--color-coral-accent); font-weight: bold;">•</span>
+              Ensure the mobile experience is equally as capable and delightful as the desktop version.
+            </li>
+            <li style="display: flex; gap: 8px; align-items: flex-start;">
+              <span style="color: var(--color-coral-accent); font-weight: bold;">•</span>
+              Identify customer frustration points in the old portal and systematically address them.
+            </li>
+            <li style="display: flex; gap: 8px; align-items: flex-start;">
+              <span style="color: var(--color-coral-accent); font-weight: bold;">•</span>
+              Reduce the volume of customer service calls by placing critical resources in an accessible dashboard.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Research -->
+    <section class="case-section">
+      <h2 class="section-num-title">02. User Research</h2>
+      <h3 class="section-heading">Survey Analysis & Customer Sentiment</h3>
+      <p class="serif-body">
+        The first phase of user research was aimed at understanding how customers experienced our legacy portal. I designed and deployed a survey prompting visitors to rate their experience during their session on Client Zone or Student Zone.
+      </p>
+
+      <!-- Survey rating results grid -->
+      <div class="case-grid-2" style="margin: 2.5rem 0; gap: 1.5rem;">
+        <div style="border: 1px solid rgba(0,0,0,0.06); border-radius: var(--border-radius-md); overflow: hidden; box-shadow: var(--shadow-subtle); display: flex; flex-direction: column; background: var(--color-bg-white);">
+          <div style="padding: 1.5rem; border-bottom: 1px solid rgba(0,0,0,0.03);">
+            <h4 style="font-size: 1.05rem; color: var(--color-text-dark); margin-bottom: 0.25rem;">Client Zone: Customer Experience Rating</h4>
+            <p style="font-size: 0.85rem; color: var(--color-text-muted);">Main rating group: Travel medical policyholders</p>
+          </div>
+          <div style="padding: 1.5rem; display: flex; align-items: center; justify-content: center; flex: 1; min-height: 220px; background: #fafafa;">
+            <img src="img/member-portal/cz-survey-results.png" alt="Client Zone survey chart showing Poor and Terrible ratings" style="max-height: 200px; width: auto; max-width: 100%; object-fit: contain;">
+          </div>
+          <span style="display: block; text-align: center; font-size: 0.85rem; color: var(--color-text-muted); padding: 0.75rem 1rem; background-color: var(--color-bg-white); border-top: 1px solid rgba(0,0,0,0.03); font-weight: 500;">Most Client Zone participants rated the experience as Terrible or Poor.</span>
+        </div>
+        
+        <div style="border: 1px solid rgba(0,0,0,0.06); border-radius: var(--border-radius-md); overflow: hidden; box-shadow: var(--shadow-subtle); display: flex; flex-direction: column; background: var(--color-bg-white);">
+          <div style="padding: 1.5rem; border-bottom: 1px solid rgba(0,0,0,0.03);">
+            <h4 style="font-size: 1.05rem; color: var(--color-text-dark); margin-bottom: 0.25rem;">Student Zone: Customer Experience Rating*</h4>
+            <p style="font-size: 0.85rem; color: var(--color-text-muted);">Main rating group: International student health policyholders</p>
+          </div>
+          <div style="padding: 1.5rem; display: flex; align-items: center; justify-content: center; flex: 1; min-height: 220px; background: #fafafa;">
+            <img src="img/member-portal/sz-survey-results.png" alt="Student Zone survey chart showing mostly Okay ratings" style="max-height: 200px; width: auto; max-width: 100%; object-fit: contain;">
+          </div>
+          <span style="display: block; text-align: center; font-size: 0.85rem; color: var(--color-text-muted); padding: 0.75rem 1rem; background-color: var(--color-bg-white); border-top: 1px solid rgba(0,0,0,0.03); font-weight: 500;">Most Student Zone participants rated the experience as Okay.</span>
+        </div>
+      </div>
+      <p style="font-size: 0.85rem; color: var(--color-text-muted); font-style: italic; margin-top: -1rem; margin-bottom: 3rem; text-align: center;">
+        Rating scale left-to-right: Terrible, Poor, Okay, Good, Great. <span style="color: var(--color-coral-accent);">*Note: No survey participants rated Student Zone as "Great".</span>
+      </p>
+
+      <div class="case-card-gray" style="margin-bottom: 2rem;">
+        <h4 style="color: var(--color-teal-primary); margin-bottom: 0.5rem; font-size: 1.15rem;">Purpose of Visit</h4>
+        <p style="font-size: 0.95rem; color: var(--color-text-muted); line-height: 1.7;">
+          The survey results showed that the primary reasons why customers are visiting Client Zone or Student Zone is to either <strong>file a claim</strong>, <strong>view their claim status</strong>, <strong>extend or renew their policy</strong>, and <strong>view their description of benefits</strong>.
+        </p>
+      </div>
+
+      <div class="case-grid-2" style="margin-bottom: 3rem; gap: 1.5rem;">
+        <div class="case-card-gray">
+          <h4 style="font-size: 1.1rem; color: var(--color-coral-accent); margin-bottom: 0.75rem;">Visitor Frustrations</h4>
+          <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+            <div>
+              <strong style="font-size: 0.8rem; text-transform: uppercase; color: var(--color-text-dark); display: block; letter-spacing: 0.5px;">Client Zone</strong>
+              <p style="font-size: 0.9rem; color: var(--color-text-muted); margin-top: 2px;">Delayed claim listings, frequent technical issues, and a poor overall navigation experience.</p>
+            </div>
+            <div>
+              <strong style="font-size: 0.8rem; text-transform: uppercase; color: var(--color-text-dark); display: block; letter-spacing: 0.5px;">Student Zone</strong>
+              <p style="font-size: 0.9rem; color: var(--color-text-muted); margin-top: 2px;">Difficult navigation paths and confusion regarding how to locate or contact customer support.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="case-card-gray">
+          <h4 style="font-size: 1.1rem; color: var(--color-teal-primary); margin-bottom: 0.75rem;">Visitor Suggestions</h4>
+          <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+            <div>
+              <strong style="font-size: 0.8rem; text-transform: uppercase; color: var(--color-text-dark); display: block; letter-spacing: 0.5px;">Client Zone</strong>
+              <p style="font-size: 0.9rem; color: var(--color-text-muted); margin-top: 2px;">Streamlining the claim filing process, modernizing the UI, and adding email updates for claim changes.</p>
+            </div>
+            <div>
+              <strong style="font-size: 0.8rem; text-transform: uppercase; color: var(--color-text-dark); display: block; letter-spacing: 0.5px;">Student Zone</strong>
+              <p style="font-size: 0.9rem; color: var(--color-text-muted); margin-top: 2px;">System infrastructure updates, alerts for pending items, and the ability to edit their profile settings.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-card-gray" style="margin-bottom: 3rem;">
+        <h4 style="color: var(--color-teal-primary); margin-bottom: 1rem; font-size: 1.2rem;">Internal Interviews: Support Team Insights</h4>
+        <p style="font-size: 0.95rem; color: var(--color-text-muted); margin-bottom: 1.25rem;">
+          To supplement customer surveys, I interviewed front-line customer service representatives to discover the key reasons why users call in. The support representatives highlighted the following major points:
+        </p>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem;">
+            <li style="display: flex; align-items: flex-start; gap: 8px; font-size: 0.95rem; color: var(--color-text-muted);">
+              <span style="color: var(--color-coral-accent); font-weight: bold; margin-top: 2px;">✕</span>
+              <span>Users call frequently for basic tasks unavailable on the portal, such as password resets and cancelling policies.</span>
+            </li>
+            <li style="display: flex; align-items: flex-start; gap: 8px; font-size: 0.95rem; color: var(--color-text-muted);">
+              <span style="color: var(--color-coral-accent); font-weight: bold; margin-top: 2px;">✕</span>
+              <span>Users are confused by vague verbiage inside DocuSign documents.</span>
+            </li>
+          </ul>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem;">
+            <li style="display: flex; align-items: flex-start; gap: 8px; font-size: 0.95rem; color: var(--color-text-muted);">
+              <span style="color: var(--color-coral-accent); font-weight: bold; margin-top: 2px;">✕</span>
+              <span>Members do not realize they are required to fill out a HIPAA form to process claims.</span>
+            </li>
+            <li style="display: flex; align-items: flex-start; gap: 8px; font-size: 0.95rem; color: var(--color-text-muted);">
+              <span style="color: var(--color-coral-accent); font-weight: bold; margin-top: 2px;">✕</span>
+              <span>The current portals are highly inconsistent across screen sizes and mobile browsers.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: User Journey Mapping -->
+    <section class="case-section">
+      <h2 class="section-num-title">03. User Journeys</h2>
+      <h3 class="section-heading">Mapping the Member Experience</h3>
+      <p class="serif-body">
+        The user journeys reveal how policyholders interact with WorldTrips, focusing on the claims process. The second half of the journey—waiting for processing and receiving responses—tends to generate the most anxiety. Clear communication in this phase represents our greatest opportunity to improve satisfaction.
+      </p>
+
+      <div style="border: 1px solid rgba(0,0,0,0.06); border-radius: var(--border-radius-md); overflow: hidden; box-shadow: var(--shadow-subtle); margin: 2.5rem 0;">
+        <img src="img/member-portal/member-portal-user-journey.png" alt="WorldTrips Member Portal User Journey Matrix" style="width: 100%; height: auto; display: block;">
+        <span style="display: block; text-align: center; font-size: 0.85rem; color: var(--color-text-muted); padding: 0.75rem 1rem; background-color: var(--color-bg-white); border-top: 1px solid rgba(0,0,0,0.03); font-weight: 500;">High-Level User Journey Diagram</span>
+      </div>
+
+      <!-- Current vs Ideal Journey horizontal scrollers -->
+      <h4 style="margin-top: 2.5rem; margin-bottom: 1rem; color: var(--color-text-dark);">Current Member Journey</h4>
+      <div style="display: flex; gap: 1.25rem; overflow-x: auto; padding: 0.5rem 5px 1.5rem 5px; scrollbar-width: thin; -webkit-overflow-scrolling: touch; margin-bottom: 2rem;">
+        
+        <!-- Purchase -->
+        <div style="flex: 0 0 280px; background: var(--color-bg-white); border: 1px solid rgba(0,0,0,0.06); border-radius: var(--border-radius-md); padding: 1.25rem; box-shadow: var(--shadow-subtle);">
+          <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--color-coral-accent); font-weight: 700;">Stage 1</span>
+          <h4 style="margin-top: 0.25rem; margin-bottom: 0.75rem;">Purchase</h4>
+          <div style="font-size: 0.85rem; display: flex; flex-direction: column; gap: 0.5rem; color: var(--color-text-muted);">
+            <div><strong>Activities:</strong> Access site & buy.</div>
+            <div><strong>Motivations:</strong> Trip peace of mind.</div>
+            <div><strong>Emotions:</strong> Secure, prepared.</div>
+            <div><strong>Barriers:</strong> Technical issues.</div>
+            <div><strong>Opportunities:</strong> Improve purchasing.</div>
+          </div>
+        </div>
+
+        <!-- Post-Purchase -->
+        <div style="flex: 0 0 280px; background: var(--color-bg-white); border: 1px solid rgba(0,0,0,0.06); border-radius: var(--border-radius-md); padding: 1.25rem; box-shadow: var(--shadow-subtle);">
+          <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--color-coral-accent); font-weight: 700;">Stage 2</span>
+          <h4 style="margin-top: 0.25rem; margin-bottom: 0.75rem;">Post-Purchase</h4>
+          <div style="font-size: 0.85rem; display: flex; flex-direction: column; gap: 0.5rem; color: var(--color-text-muted);">
+            <div><strong>Activities:</strong> Explore email info & links.</div>
+            <div><strong>Motivations:</strong> Understand coverage.</div>
+            <div><strong>Emotions:</strong> Curious.</div>
+            <div><strong>Barriers:</strong> Low reading motivation.</div>
+            <div><strong>Opportunities:</strong> Centralize documents.</div>
+          </div>
+        </div>
+
+        <!-- Traveling -->
+        <div style="flex: 0 0 280px; background: var(--color-bg-white); border: 1px solid rgba(0,0,0,0.06); border-radius: var(--border-radius-md); padding: 1.25rem; box-shadow: var(--shadow-subtle);">
+          <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--color-coral-accent); font-weight: 700;">Stage 3</span>
+          <h4 style="margin-top: 0.25rem; margin-bottom: 0.75rem;">Traveling</h4>
+          <div style="font-size: 0.85rem; display: flex; flex-direction: column; gap: 0.5rem; color: var(--color-text-muted);">
+            <div><strong>Activities:</strong> Flights, cruises, tours.</div>
+            <div><strong>Motivations:</strong> Great travel experience.</div>
+            <div><strong>Emotions:</strong> Nervous, excited.</div>
+            <div><strong>Barriers:</strong> Fragmented source files.</div>
+            <div><strong>Opportunities:</strong> Learn member preferences.</div>
+          </div>
+        </div>
+
+        <!-- Injury/Illness -->
+        <div style="flex: 0 0 280px; background: var(--color-bg-white); border: 1px solid rgba(0,0,0,0.06); border-radius: var(--border-radius-md); padding: 1.25rem; box-shadow: var(--shadow-subtle);">
+          <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--color-coral-accent); font-weight: 700;">Stage 4</span>
+          <h4 style="margin-top: 0.25rem; margin-bottom: 0.75rem;">Injury/Illness</h4>
+          <div style="font-size: 0.85rem; display: flex; flex-direction: column; gap: 0.5rem; color: var(--color-text-muted);">
+            <div><strong>Activities:</strong> Emergency hospital visit.</div>
+            <div><strong>Motivations:</strong> Fear of medical issues.</div>
+            <div><strong>Emotions:</strong> Confused, exhausted.</div>
+            <div><strong>Barriers:</strong> Coverage uncertainty.</div>
+            <div><strong>Opportunities:</strong> Plain benefit listings.</div>
+          </div>
+        </div>
+
+        <!-- Filing -->
+        <div style="flex: 0 0 280px; background: var(--color-bg-white); border: 1px solid rgba(0,0,0,0.06); border-radius: var(--border-radius-md); padding: 1.25rem; box-shadow: var(--shadow-subtle);">
+          <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--color-coral-accent); font-weight: 700;">Stage 5</span>
+          <h4 style="margin-top: 0.25rem; margin-bottom: 0.75rem;">Filing a Claim</h4>
+          <div style="font-size: 0.85rem; display: flex; flex-direction: column; gap: 0.5rem; color: var(--color-text-muted);">
+            <div><strong>Activities:</strong> Provider files OR member uploads.</div>
+            <div><strong>Motivations:</strong> Medical reimbursement.</div>
+            <div><strong>Emotions:</strong> Overwhelmed, frustrated.</div>
+            <div><strong>Barriers:</strong> Portal limitation & form issues.</div>
+            <div><strong>Opportunities:</strong> Simple upload wizards.</div>
+          </div>
+        </div>
+
+        <!-- Processing -->
+        <div style="flex: 0 0 280px; background: var(--color-bg-white); border: 1px solid rgba(0,0,0,0.06); border-radius: var(--border-radius-md); padding: 1.25rem; box-shadow: var(--shadow-subtle);">
+          <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--color-coral-accent); font-weight: 700;">Stage 6</span>
+          <h4 style="margin-top: 0.25rem; margin-bottom: 0.75rem;">Processing</h4>
+          <div style="font-size: 0.85rem; display: flex; flex-direction: column; gap: 0.5rem; color: var(--color-text-muted);">
+            <div><strong>Activities:</strong> Wait for updates.</div>
+            <div><strong>Motivations:</strong> Resolve financial weight.</div>
+            <div><strong>Emotions:</strong> Impatient, worried.</div>
+            <div><strong>Barriers:</strong> Lack of digital alerts.</div>
+            <div><strong>Opportunities:</strong> Automated status timelines.</div>
+          </div>
+        </div>
+
+        <!-- Finalized -->
+        <div style="flex: 0 0 280px; background: var(--color-bg-white); border: 1px solid rgba(0,0,0,0.06); border-radius: var(--border-radius-md); padding: 1.25rem; box-shadow: var(--shadow-subtle);">
+          <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--color-coral-accent); font-weight: 700;">Stage 7</span>
+          <h4 style="margin-top: 0.25rem; margin-bottom: 0.75rem;">Claim Finalized</h4>
+          <div style="font-size: 0.85rem; display: flex; flex-direction: column; gap: 0.5rem; color: var(--color-text-muted);">
+            <div><strong>Activities:</strong> Review EOB documentation.</div>
+            <div><strong>Motivations:</strong> Complete the process.</div>
+            <div><strong>Emotions:</strong> Frustrated or relieved.</div>
+            <div><strong>Barriers:</strong> Complex explanation sheets.</div>
+            <div><strong>Opportunities:</strong> Detail explanation aids.</div>
+          </div>
+        </div>
+
+        <!-- Response -->
+        <div style="flex: 0 0 280px; background: var(--color-bg-white); border: 1px solid rgba(0,0,0,0.06); border-radius: var(--border-radius-md); padding: 1.25rem; box-shadow: var(--shadow-subtle);">
+          <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--color-coral-accent); font-weight: 700;">Stage 8</span>
+          <h4 style="margin-top: 0.25rem; margin-bottom: 0.75rem;">Response</h4>
+          <div style="font-size: 0.85rem; display: flex; flex-direction: column; gap: 0.5rem; color: var(--color-text-muted);">
+            <div><strong>Activities:</strong> Accept or appeal outcome.</div>
+            <div><strong>Motivations:</strong> Share travel review.</div>
+            <div><strong>Emotions:</strong> Variable satisfaction.</div>
+            <div><strong>Barriers:</strong> Complicated appeal channels.</div>
+            <div><strong>Opportunities:</strong> Support follow-up emails.</div>
+          </div>
+        </div>
+      </div>
+
+      <h4 style="margin-bottom: 1rem; color: var(--color-text-dark);">Ideal Member Journey</h4>
+      <div style="display: flex; gap: 1.25rem; overflow-x: auto; padding: 0.5rem 5px 1.5rem 5px; scrollbar-width: thin; -webkit-overflow-scrolling: touch; margin-bottom: 3rem;">
+        
+        <!-- Purchase -->
+        <div style="flex: 0 0 280px; background: var(--color-bg-white); border: 1px solid rgba(0,0,0,0.06); border-radius: var(--border-radius-md); padding: 1.25rem; box-shadow: var(--shadow-subtle);">
+          <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--color-teal-primary); font-weight: 700;">Stage 1</span>
+          <h4 style="margin-top: 0.25rem; margin-bottom: 0.75rem;">Purchase</h4>
+          <div style="font-size: 0.85rem; display: flex; flex-direction: column; gap: 0.5rem; color: var(--color-text-muted);">
+            <div><strong>Activities:</strong> Buy plan on main path.</div>
+            <div><strong>Motivations:</strong> Trip peace of mind.</div>
+            <div><strong>Emotions:</strong> Secure, confident.</div>
+            <div><strong>Barriers:</strong> Technical issues.</div>
+            <div><strong>Opportunities:</strong> Improve purchasing.</div>
+          </div>
+        </div>
+
+        <!-- Post-Purchase -->
+        <div style="flex: 0 0 280px; background: var(--color-bg-white); border: 1px solid rgba(0,0,0,0.06); border-radius: var(--border-radius-md); padding: 1.25rem; box-shadow: var(--shadow-subtle);">
+          <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--color-teal-primary); font-weight: 700;">Stage 2</span>
+          <h4 style="margin-top: 0.25rem; margin-bottom: 0.75rem;">Post-Purchase</h4>
+          <div style="font-size: 0.85rem; display: flex; flex-direction: column; gap: 0.5rem; color: var(--color-text-muted);">
+            <div><strong>Activities:</strong> Explore unified documents.</div>
+            <div><strong>Motivations:</strong> Understand benefits.</div>
+            <div><strong>Emotions:</strong> Curious, impressed.</div>
+            <div><strong>Barriers:</strong> Low reading motivation.</div>
+            <div><strong>Opportunities:</strong> Simplify dashboard.</div>
+          </div>
+        </div>
+
+        <!-- Traveling -->
+        <div style="flex: 0 0 280px; background: var(--color-bg-white); border: 1px solid rgba(0,0,0,0.06); border-radius: var(--border-radius-md); padding: 1.25rem; box-shadow: var(--shadow-subtle);">
+          <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--color-teal-primary); font-weight: 700;">Stage 3</span>
+          <h4 style="margin-top: 0.25rem; margin-bottom: 0.75rem;">Traveling</h4>
+          <div style="font-size: 0.85rem; display: flex; flex-direction: column; gap: 0.5rem; color: var(--color-text-muted);">
+            <div><strong>Activities:</strong> Enjoying trip.</div>
+            <div><strong>Motivations:</strong> Smooth experiences.</div>
+            <div><strong>Emotions:</strong> Excited.</div>
+            <div><strong>Barriers:</strong> Too many sources.</div>
+            <div><strong>Opportunities:</strong> Member-centric info.</div>
+          </div>
+        </div>
+
+        <!-- Injury/Illness -->
+        <div style="flex: 0 0 280px; background: var(--color-bg-white); border: 1px solid rgba(0,0,0,0.06); border-radius: var(--border-radius-md); padding: 1.25rem; box-shadow: var(--shadow-subtle);">
+          <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--color-teal-primary); font-weight: 700;">Stage 4</span>
+          <h4 style="margin-top: 0.25rem; margin-bottom: 0.75rem;">Injury/Illness</h4>
+          <div style="font-size: 0.85rem; display: flex; flex-direction: column; gap: 0.5rem; color: var(--color-text-muted);">
+            <div><strong>Activities:</strong> Hospital visit.</div>
+            <div><strong>Motivations:</strong> Seek help.</div>
+            <div><strong>Emotions:</strong> Informed, supported.</div>
+            <div><strong>Barriers:</strong> Coverage concerns.</div>
+            <div><strong>Opportunities:</strong> Instant benefit check.</div>
+          </div>
+        </div>
+
+        <!-- Filing -->
+        <div style="flex: 0 0 280px; background: var(--color-bg-white); border: 1px solid rgba(0,0,0,0.06); border-radius: var(--border-radius-md); padding: 1.25rem; box-shadow: var(--shadow-subtle);">
+          <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--color-teal-primary); font-weight: 700;">Stage 5</span>
+          <h4 style="margin-top: 0.25rem; margin-bottom: 0.75rem;">Filing a Claim</h4>
+          <div style="font-size: 0.85rem; display: flex; flex-direction: column; gap: 0.5rem; color: var(--color-text-muted);">
+            <div><strong>Activities:</strong> Submit via portal or provider.</div>
+            <div><strong>Motivations:</strong> Ease finance burden.</div>
+            <div><strong>Emotions:</strong> Confident, competent.</div>
+            <div><strong>Barriers:</strong> Technical difficulties.</div>
+            <div><strong>Opportunities:</strong> Quick scan card inputs.</div>
+          </div>
+        </div>
+
+        <!-- Processing -->
+        <div style="flex: 0 0 280px; background: var(--color-bg-white); border: 1px solid rgba(0,0,0,0.06); border-radius: var(--border-radius-md); padding: 1.25rem; box-shadow: var(--shadow-subtle);">
+          <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--color-teal-primary); font-weight: 700;">Stage 6</span>
+          <h4 style="margin-top: 0.25rem; margin-bottom: 0.75rem;">Processing</h4>
+          <div style="font-size: 0.85rem; display: flex; flex-direction: column; gap: 0.5rem; color: var(--color-text-muted);">
+            <div><strong>Activities:</strong> Check progress timeline.</div>
+            <div><strong>Motivations:</strong> Short wait time.</div>
+            <div><strong>Emotions:</strong> Confident, understanding.</div>
+            <div><strong>Barriers:</strong> Waiting period.</div>
+            <div><strong>Opportunities:</strong> Status check notifications.</div>
+          </div>
+        </div>
+
+        <!-- Finalized -->
+        <div style="flex: 0 0 280px; background: var(--color-bg-white); border: 1px solid rgba(0,0,0,0.06); border-radius: var(--border-radius-md); padding: 1.25rem; box-shadow: var(--shadow-subtle);">
+          <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--color-teal-primary); font-weight: 700;">Stage 7</span>
+          <h4 style="margin-top: 0.25rem; margin-bottom: 0.75rem;">Claim Finalized</h4>
+          <div style="font-size: 0.85rem; display: flex; flex-direction: column; gap: 0.5rem; color: var(--color-text-muted);">
+            <div><strong>Activities:</strong> Review plain-language EOB.</div>
+            <div><strong>Motivations:</strong> Understand coverage outcome.</div>
+            <div><strong>Emotions:</strong> Happy, clear-headed.</div>
+            <div><strong>Barriers:</strong> Complex wording.</div>
+            <div><strong>Opportunities:</strong> Simple details summaries.</div>
+          </div>
+        </div>
+
+        <!-- Response -->
+        <div style="flex: 0 0 280px; background: var(--color-bg-white); border: 1px solid rgba(0,0,0,0.06); border-radius: var(--border-radius-md); padding: 1.25rem; box-shadow: var(--shadow-subtle);">
+          <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--color-teal-primary); font-weight: 700;">Stage 8</span>
+          <h4 style="margin-top: 0.25rem; margin-bottom: 0.75rem;">Response</h4>
+          <div style="font-size: 0.85rem; display: flex; flex-direction: column; gap: 0.5rem; color: var(--color-text-muted);">
+            <div><strong>Activities:</strong> Accept outcome or appeal online.</div>
+            <div><strong>Motivations:</strong> Share positive review.</div>
+            <div><strong>Emotions:</strong> Glad to use WorldTrips.</div>
+            <div><strong>Barriers:</strong> None.</div>
+            <div><strong>Opportunities:</strong> Follow-up loyal emails.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Brainstorming Ideas -->
+    <section class="case-section">
+      <h2 class="section-num-title">04. Redesign Solutions</h2>
+      <h3 class="section-heading">Mocking Up Solutions</h3>
+      <p class="serif-body">
+        By reviewing the user research, as well exploring the possibilities of our current in-house technology, I began to address the users' concerns by mocking up new features and improving ones that already exist. I started by organizing homepage information based on what the most popular reasons are for visiting the portals.
+      </p>
+
+      <div style="border: 1px solid rgba(0,0,0,0.06); border-radius: var(--border-radius-md); overflow: hidden; box-shadow: var(--shadow-subtle); margin: 2rem 0;">
+        <img src="img/member-portal/homepage-buttons.PNG" alt="WorldTrips home dashboard three primary buttons" style="width: 100%; height: auto; display: block;">
+        <span style="display: block; text-align: center; font-size: 0.85rem; color: var(--color-text-muted); padding: 0.75rem 1rem; background-color: var(--color-bg-white); border-top: 1px solid rgba(0,0,0,0.03); font-weight: 500;">Core Dashboard Actions: Claims, Policy Extensions, and Description of Coverage (V1)</span>
+      </div>
+
+      <p class="serif-body">
+        Next, I decided to address the lack of submitted claim information creating a detailed and organized claim timeline. The image below shows 5 steps with a checkmark next to the steps that have been completed. There is also a section below each step with more details for the customer to review.
+      </p>
+
+      <div style="border: 1px solid rgba(0,0,0,0.06); border-radius: var(--border-radius-md); overflow: hidden; box-shadow: var(--shadow-subtle); margin: 2rem 0;">
+        <img src="img/member-portal/claim-timeline.PNG" alt="Interactive claim timeline showing completed stages" style="width: 100%; height: auto; display: block;">
+        <span style="display: block; text-align: center; font-size: 0.85rem; color: var(--color-text-muted); padding: 0.75rem 1rem; background-color: var(--color-bg-white); border-top: 1px solid rgba(0,0,0,0.03); font-weight: 500;">Interactive 5-step claim status tracker (V1)</span>
+      </div>
+
+      <p class="serif-body">
+        Next, I added a highly requested feature from our visitors - an email notification feature. Visitors can see all important notifications on the "Important Notices" page (example shown in the image below), but they will also receive email alerts about pending actions they must address.
+      </p>
+
+      <div style="border: 1px solid rgba(0,0,0,0.06); border-radius: var(--border-radius-md); overflow: hidden; box-shadow: var(--shadow-subtle); margin: 2rem 0;">
+        <img src="img/member-portal/important-notices.PNG" alt="Dashboard showing list of notices and alerts" style="width: 100%; height: auto; display: block;">
+        <span style="display: block; text-align: center; font-size: 0.85rem; color: var(--color-text-muted); padding: 0.75rem 1rem; background-color: var(--color-bg-white); border-top: 1px solid rgba(0,0,0,0.03); font-weight: 500;">Important Notices list for claims and appeals</span>
+      </div>
+
+      <p class="serif-body">
+        Along with these updates, users can also expect to see more options that gives them the freedom to edit their personal information and modify their policy wherever possible.
+      </p>
+    </section>
+
+    <!-- Section 5: Usability Study findings -->
+    <section class="case-section">
+      <h2 class="section-num-title">05. Usability Study</h2>
+      <h3 class="section-heading">Testing & Finding Friction</h3>
+      <p class="serif-body">
+        After creating an initial prototype on Adobe XD, I facilitated 6 user testing sessions with participants of varying demographics. Half of the users tested the mobile version and the other half tested the desktop version.
+      </p>
+
+      <div style="margin: 2rem 0;">
+        <h4 style="margin-bottom: 1rem; color: var(--color-text-dark);">Core Usability Study Insights</h4>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+          <ul style="list-style: disc; padding-left: 1.2rem; font-size: 0.95rem; color: var(--color-text-muted); display: flex; flex-direction: column; gap: 0.5rem;">
+            <li>Some users had a small moment of confusion when they reached the login page, expecting to enter their email to register immediately.</li>
+            <li>Users wanted more visual separation between links in the main navigation and requested a live chat option.</li>
+            <li>Most users struggled to figure out how to switch between different travelers whose policy they had purchased.</li>
+          </ul>
+          <ul style="list-style: disc; padding-left: 1.2rem; font-size: 0.95rem; color: var(--color-text-muted); display: flex; flex-direction: column; gap: 0.5rem;">
+            <li>One user requested to see email alerts confirming refund amounts upon policy cancellation.</li>
+            <li>The term "Description of Coverage" was found to be slightly confusing; "Description of Benefits" made more sense.</li>
+            <li>Users requested explicit maximum file size and file type details in the claim file upload form.</li>
+          </ul>
+        </div>
+      </div>
+
+      <h4 style="margin-top: 2.5rem; margin-bottom: 1rem; color: var(--color-text-dark);">Usability Participant Feedback</h4>
+      <!-- Usability Grid -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-bottom: 3rem;">
+        
+        <!-- P1 -->
+        <div class="case-card-gray" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 4px;">
+              <strong style="color: var(--color-text-dark);">Participant 1</strong>
+              <span style="font-size: 0.8rem; color: var(--color-teal-primary); font-weight: 600;">58 / F / Desktop</span>
+            </div>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.9rem; color: var(--color-text-muted);">
+              <li>• "[I] would like to see a chat feature."</li>
+              <li>• "[The label] 'Claim Number' is confusing."</li>
+              <li>• "[When changing address of policyholders], what do you do if they all don't live with you?"</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- P2 -->
+        <div class="case-card-gray" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 4px;">
+              <strong style="color: var(--color-text-dark);">Participant 2</strong>
+              <span style="font-size: 0.8rem; color: var(--color-teal-primary); font-weight: 600;">48 / F / Mobile</span>
+            </div>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.9rem; color: var(--color-text-muted);">
+              <li>• "On the landing page, put 'first time users need to register'."</li>
+              <li>• "[To add a policy] put a tab at the top that shows 'add a policy'."</li>
+              <li>• "[Viewing benefits] is very easy."</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- P3 -->
+        <div class="case-card-gray" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 4px;">
+              <strong style="color: var(--color-text-dark);">Participant 3</strong>
+              <span style="font-size: 0.8rem; color: var(--color-teal-primary); font-weight: 600;">30 / M / Desktop</span>
+            </div>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.9rem; color: var(--color-text-muted);">
+              <li>• "I expected [add a policy] option on homepage."</li>
+              <li>• "[When filing] I didn't know whether to choose 'claim' or 'appeal'. Once I read descriptions, it made sense."</li>
+              <li>• "[Overall] it was precise and on point."</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- P4 -->
+        <div class="case-card-gray" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 4px;">
+              <strong style="color: var(--color-text-dark);">Participant 4</strong>
+              <span style="font-size: 0.8rem; color: var(--color-teal-primary); font-weight: 600;">20 / F / Desktop</span>
+            </div>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.9rem; color: var(--color-text-muted);">
+              <li>• "I want the option to switch to another person's account or page in case Alex wants to see another account information."</li>
+              <li>• "I would name [the 'description of coverage' button] 'description of benefits'."</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- P5 -->
+        <div class="case-card-gray" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 4px;">
+              <strong style="color: var(--color-text-dark);">Participant 5</strong>
+              <span style="font-size: 0.8rem; color: var(--color-teal-primary); font-weight: 600;">33 / F / Desktop</span>
+            </div>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.9rem; color: var(--color-text-muted);">
+              <li>• "If you need travel insurance, the only reason you're going to need it is if you're going to file a claim."</li>
+              <li>• "What if it was just me or one of the other travelers who wanted to update policy information?"</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- P6 -->
+        <div class="case-card-gray" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 4px;">
+              <strong style="color: var(--color-text-dark);">Participant 6</strong>
+              <span style="font-size: 0.8rem; color: var(--color-teal-primary); font-weight: 600;">23 / M / Desktop</span>
+            </div>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.9rem; color: var(--color-text-muted);">
+              <li>• "I liked being able to see the timeline. It is useful to make sure that both sides are on the same track as to what happened and when."</li>
+              <li>• "[On Contact page] the process was easy, but I missed the call section. I would have first clicked send, then realized there's a call section."</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: Prototype Iteration -->
+    <section class="case-section">
+      <h2 class="section-num-title">06. Prototype Updates</h2>
+      <h3 class="section-heading">Addressing the Friction Points</h3>
+      <p class="serif-body">
+        I addressed the issues mentioned by the usability study participants through target iterations on the Adobe XD prototype.
+      </p>
+
+      <h4 style="margin-top: 2rem; margin-bottom: 0.5rem; color: var(--color-text-dark);">1. Context-Rich Claims Timeline</h4>
+      <p class="serif-body">
+        In the image below, the claim timeline has been changed to reflect the issue mentioned by Participant 1, who found the claim number label to be confusing. Though we have to have that label to differentiate claims, I also added other ways of organizing and labeling the claims by adding the field "date incurred", "status", and "provider". This also creates an opportunity for users to filter results.
+      </p>
+      <div style="border: 1px solid rgba(0,0,0,0.06); border-radius: var(--border-radius-md); overflow: hidden; box-shadow: var(--shadow-subtle); margin: 2rem 0;">
+        <img src="img/member-portal/claim-timeline-v2.png" alt="Revised claim timeline with status, date incurred, and provider fields" style="width: 100%; height: auto; display: block;">
+        <span style="display: block; text-align: center; font-size: 0.85rem; color: var(--color-text-muted); padding: 0.75rem 1rem; background-color: var(--color-bg-white); border-top: 1px solid rgba(0,0,0,0.03); font-weight: 500;">Claim timeline accordion showing detailed context (V2)</span>
+      </div>
+
+      <h4 style="margin-top: 3rem; margin-bottom: 0.5rem; color: var(--color-text-dark);">2. Seamless Registration Flow</h4>
+      <p class="serif-body">
+        Since users initially thought they had to input their email to start their registration, I decided to change the flow of the registration process just in case users missed the "First time user?" link, as shown in the image below. By entering an email that has not yet been registered, a user will be prompted with a registration form with the email they entered preset to the registration email field. This is a more seamless experience for the user instead of showing an error message saying that the email is not associated with an account.
+      </p>
+      <div style="border: 1px solid rgba(0,0,0,0.06); border-radius: var(--border-radius-md); overflow: hidden; box-shadow: var(--shadow-subtle); margin: 2rem 0;">
+        <img src="img/member-portal/landing-page-v2.png" alt="Login page showing smart registration redirection" style="width: 100%; height: auto; display: block;">
+        <span style="display: block; text-align: center; font-size: 0.85rem; color: var(--color-text-muted); padding: 0.75rem 1rem; background-color: var(--color-bg-white); border-top: 1px solid rgba(0,0,0,0.03); font-weight: 500;">Revised landing page with intelligent login-to-registration transition (V2)</span>
+      </div>
+
+      <h4 style="margin-top: 3rem; margin-bottom: 0.5rem; color: var(--color-text-dark);">3. Multi-Policy Member Switcher</h4>
+      <p class="serif-body">
+        There were two issues that were able to be addressed with the addition of one feature. The first issue was that some users seemed to look for the "Add Policy" button in multiple places throughout the customer portal. Most users seemed look for the button at the top of the webpages. The second issue was that users seemed to be overwhelmed by the thought of seeing multiple policies while navigating the site, rather than seeing everything organized as a unique policy number or policyholder. 
+      </p>
+      <p class="serif-body">
+        My colleague and I brainstormed and decided to create a dropdown at the top of every page where a user can view a single policy at a time, switch between the policies they are viewing, and have the option to add a new policy. The images below show how a new policy is added. The "viewing" dropdown will also be found at the top of the page so users can easily switch between policyholders at anytime.
+      </p>
+
+      <!-- Add Policy Mobile grid -->
+      <div class="case-grid-3" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 2.5rem 0;">
+        <div style="border: 1px solid rgba(0,0,0,0.06); border-radius: var(--border-radius-md); overflow: hidden; box-shadow: var(--shadow-subtle); background: var(--color-bg-white); display: flex; flex-direction: column;">
+          <div style="padding: 1rem; background: #fafafa; display: flex; justify-content: center; align-items: center; flex: 1;">
+            <img src="img/member-portal/add-policy-mobile-1.png" alt="Mobile dropdown listing 1 policyholder" style="max-height: 280px; width: auto; max-width: 100%; object-fit: contain;">
+          </div>
+          <span style="display: block; text-align: center; font-size: 0.8rem; color: var(--color-text-muted); padding: 0.75rem 1rem; border-top: 1px solid rgba(0,0,0,0.03); font-weight: 500;">1. Dropdown showing single policyholder</span>
+        </div>
+        
+        <div style="border: 1px solid rgba(0,0,0,0.06); border-radius: var(--border-radius-md); overflow: hidden; box-shadow: var(--shadow-subtle); background: var(--color-bg-white); display: flex; flex-direction: column;">
+          <div style="padding: 1rem; background: #fafafa; display: flex; justify-content: center; align-items: center; flex: 1;">
+            <img src="img/member-portal/add-policy-mobile-2.png" alt="Mobile form for adding a policy" style="max-height: 280px; width: auto; max-width: 100%; object-fit: contain;">
+          </div>
+          <span style="display: block; text-align: center; font-size: 0.8rem; color: var(--color-text-muted); padding: 0.75rem 1rem; border-top: 1px solid rgba(0,0,0,0.03); font-weight: 500;">2. Form fields to append another policy</span>
+        </div>
+
+        <div style="border: 1px solid rgba(0,0,0,0.06); border-radius: var(--border-radius-md); overflow: hidden; box-shadow: var(--shadow-subtle); background: var(--color-bg-white); display: flex; flex-direction: column;">
+          <div style="padding: 1rem; background: #fafafa; display: flex; justify-content: center; align-items: center; flex: 1;">
+            <img src="img/member-portal/add-policy-mobile-3.png" alt="Mobile dropdown listing two policyholders" style="max-height: 280px; width: auto; max-width: 100%; object-fit: contain;">
+          </div>
+          <span style="display: block; text-align: center; font-size: 0.8rem; color: var(--color-text-muted); padding: 0.75rem 1rem; border-top: 1px solid rgba(0,0,0,0.03); font-weight: 500;">3. Updated switcher showing both policies</span>
+        </div>
+      </div>
+
+      <h4 style="margin-top: 3rem; margin-bottom: 0.5rem; color: var(--color-text-dark);">4. Verbiage Update: Description of Benefits</h4>
+      <p class="serif-body">
+        Another issue that needed to be address was the the button verbiage that said "Description of Coverage". It wasn't too confusing for users to understand, but some users recommended to change it to "Description of Benefits" for extra clarity, which is reflected in the image below.
+      </p>
+      <div style="border: 1px solid rgba(0,0,0,0.06); border-radius: var(--border-radius-md); overflow: hidden; box-shadow: var(--shadow-subtle); margin: 2rem 0;">
+        <img src="img/member-portal/homepage-buttons-v2.PNG" alt="Homepage buttons showing updated verbiage" style="width: 100%; height: auto; display: block;">
+        <span style="display: block; text-align: center; font-size: 0.85rem; color: var(--color-text-muted); padding: 0.75rem 1rem; background-color: var(--color-bg-white); border-top: 1px solid rgba(0,0,0,0.03); font-weight: 500;">Updated Dashboard: "Description of Benefits" terminology (V2)</span>
+      </div>
+    </section>
+
+    <!-- Section 7: Conclusion -->
+    <section class="case-section">
+      <h2 class="section-num-title">07. Conclusion</h2>
+      <h3 class="section-heading">Final Prototype & Developer Handoff</h3>
+      <p class="serif-body">
+        I used the information gathered from the usability study to make improvements to the prototype. The prototype was made using Adobe XD, which has the development share feature that simplifies the process of communicating the CSS properties. I used InVision to import images to create a simple, interactive version that can be presented to an audience.
+      </p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="contact-section" class="galactic-footer section-padding">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-left">
+          <h2>Let's build something out of this world.</h2>
+          <p>
+            I am currently open to senior UX designer opportunities. Get in touch to discuss interface design, accessibility, and rapid prototyping.
+          </p>
+          <ul class="contact-info-list">
+            <li>
+              <a href="mailto:jacqueline1luna@gmail.com">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                jacqueline1luna@gmail.com
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-right">
+          <form id="contact-form" autocomplete="on" action="https://formspree.io/f/placeholder" method="POST">
+            <div class="form-group">
+              <label for="contact-name">Name</label>
+              <input type="text" id="contact-name" name="name" class="form-control" placeholder="Luna Lovegood" required>
+            </div>
+            <div class="form-group">
+              <label for="contact-email">Email</label>
+              <input type="email" id="contact-email" name="email" class="form-control" placeholder="luna@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="contact-message">Message</label>
+              <textarea id="contact-message" name="message" class="form-control" placeholder="How can I help you?" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Luna. All Rights Reserved.</p>
+        <div class="footer-links">
+          <a href="home.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="home.html#work-section">Case Studies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
