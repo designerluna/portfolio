@@ -86,18 +86,18 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Scroll Spy for Home Sticky Sidebar
-  const sidebarLinks = document.querySelectorAll('.nav-link-sidebar');
+  const sidebarLinks = document.querySelectorAll('.sidebar-link');
   const projectSections = document.querySelectorAll('.card-section-home');
 
   if (sidebarLinks.length > 0 && projectSections.length > 0) {
-    window.addEventListener('scroll', () => {
+    const updateScrollSpy = () => {
       let currentSectionId = '';
+      const scrollPosition = window.scrollY || window.pageYOffset;
       
       projectSections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        // Scroll adjustment offset
-        if (window.scrollY >= (sectionTop - 250)) {
+        const sectionTop = section.getBoundingClientRect().top + scrollPosition;
+        // Scroll spy trigger offset
+        if (scrollPosition >= (sectionTop - 250)) {
           currentSectionId = section.getAttribute('id');
         }
       });
@@ -109,7 +109,10 @@ document.addEventListener('DOMContentLoaded', () => {
           link.classList.add('active');
         }
       });
-    });
+    };
+
+    window.addEventListener('scroll', updateScrollSpy);
+    updateScrollSpy(); // Run initially
   }
 
   // Clients Carousel Scroll Logic
@@ -190,6 +193,84 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Canvas-based Starry Space Background Renderer
   initStarryBackground();
+
+  // Image Lightbox for Project Detail Pages
+  const caseBody = document.querySelector('.case-body');
+  if (caseBody) {
+    // Create lightbox HTML structures
+    const lightboxOverlay = document.createElement('div');
+    lightboxOverlay.className = 'lightbox-overlay';
+    lightboxOverlay.setAttribute('role', 'dialog');
+    lightboxOverlay.setAttribute('aria-label', 'Image lightbox');
+
+    lightboxOverlay.innerHTML = `
+      <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
+      <div class="lightbox-content">
+        <img class="lightbox-image" src="" alt="">
+        <div class="lightbox-caption"></div>
+      </div>
+    `;
+
+    document.body.appendChild(lightboxOverlay);
+
+    const lightboxImg = lightboxOverlay.querySelector('.lightbox-image');
+    const lightboxCaption = lightboxOverlay.querySelector('.lightbox-caption');
+    const closeBtn = lightboxOverlay.querySelector('.lightbox-close');
+    const lightboxContent = lightboxOverlay.querySelector('.lightbox-content');
+
+    const openLightbox = (imgSrc, imgAlt) => {
+      lightboxImg.src = imgSrc;
+      lightboxImg.alt = imgAlt;
+      lightboxCaption.textContent = imgAlt || '';
+      lightboxOverlay.classList.add('active');
+      document.body.classList.add('lightbox-open');
+    };
+
+    const closeLightbox = () => {
+      lightboxOverlay.classList.remove('active');
+      document.body.classList.remove('lightbox-open');
+      lightboxImg.classList.remove('zoomed');
+      lightboxContent.classList.remove('zoomed');
+      setTimeout(() => {
+        lightboxImg.src = '';
+        lightboxImg.alt = '';
+        lightboxCaption.textContent = '';
+      }, 400); // clear content after transition ends
+    };
+
+    // Add click listener to all case body images
+    const images = caseBody.querySelectorAll('img');
+    images.forEach(img => {
+      img.addEventListener('click', (e) => {
+        e.stopPropagation();
+        openLightbox(img.src, img.alt);
+      });
+    });
+
+    // Toggle zoom on image click
+    lightboxImg.addEventListener('click', (e) => {
+      e.stopPropagation(); // Prevent closing overlay
+      lightboxImg.classList.toggle('zoomed');
+      lightboxContent.classList.toggle('zoomed');
+    });
+
+    // Close on button click
+    closeBtn.addEventListener('click', closeLightbox);
+
+    // Close on clicking overlay background
+    lightboxOverlay.addEventListener('click', (e) => {
+      if (e.target === lightboxOverlay || e.target.classList.contains('lightbox-content')) {
+        closeLightbox();
+      }
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && lightboxOverlay.classList.contains('active')) {
+        closeLightbox();
+      }
+    });
+  }
 });
 
 // Canvas-based Space render
